@@ -1,0 +1,30 @@
+const fiveSort = (nums) => {
+    // todo
+    let i=0
+    let j= nums.length-1
+
+    while(i<j){
+
+          while(nums[j]===5){
+            j-=1
+          }
+
+          while(nums[i]!==5){
+            i+=1
+          }
+
+          nums[i]=nums[j]
+          nums[j]=5
+          j-=1
+          i+=1
+    }
+
+    return nums
+
+  };
+
+
+const fives = new Array(20000).fill(5);
+const fours = new Array(20000).fill(4);
+const nums = [...fives, ...fours];
+console.log(fiveSort(nums))
